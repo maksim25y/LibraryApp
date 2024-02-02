@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import ru.mud.springcourse.models.Person;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class PersonDao {
@@ -35,5 +34,15 @@ public class PersonDao {
     public void update(int id, Person person) {
         jdbcTemplate.update("UPDATE person SET info=?,birthday=? WHERE id=?"
                 ,person.getInfo(),person.getBirthday(),id);
+    }
+
+    public void delete(int id) {
+        jdbcTemplate.update("DELETE FROM person WHERE id=?",id);
+    }
+
+    public List<Person> getByName(String info) {
+        return jdbcTemplate.query("SELECT * FROM person WHERE info=?",
+                new Object[]{info},
+                new BeanPropertyRowMapper<>(Person.class)).stream().toList();
     }
 }

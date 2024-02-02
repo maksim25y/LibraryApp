@@ -15,6 +15,10 @@
         <div style="color: red" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">Age error</div>
         <br>
         <input type="submit" value="Редактировать">
+        <br>
+        <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+            <input type="submit" value="Delete">
+        </form>
     </form>
 </body>
 </html>
