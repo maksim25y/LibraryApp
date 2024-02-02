@@ -19,4 +19,9 @@ public class PersonDao {
     public List<Person> index() {
         return jdbcTemplate.query("SELECT * FROM person",new BeanPropertyRowMapper<>(Person.class)).stream().toList();
     }
+
+    public void save(Person person) {
+        jdbcTemplate.update("INSERT INTO person(info,birthday) VALUES(?,?);"
+        ,person.getInfo(),person.getBirthday());
+    }
 }
