@@ -1,0 +1,13 @@
+create table person(
+    id serial primary key,
+    info varchar unique,
+    birthday timestamp not null
+);
+
+create table book(
+    id serial primary key,
+    name varchar not null,
+    author varchar not null,
+    date int not null check (date>1900 and date<=2024),
+    user_id int references person(id) on delete set null
+);
