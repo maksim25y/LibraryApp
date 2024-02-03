@@ -10,6 +10,11 @@
         <span th:text="${book.getAuthor()}">VALUE</span>,
         <span th:text="${book.getDate()}">VALUE</span>
     </p>
+<!--    <select th:if="${not people.isEmpty()}">-->
+<!--        <option th:each="person: ${people}" th:value="${person.getInfo()}"></option>-->
+<!--    </select>-->
+    <p>Книга сейчас у: <span th:text="${person.getInfo()}">VALUE</span></p>
+    <br>
     <div>
         <a th:href="@{/books/{id}/edit(id=${book.getId()})}">Редактировать</a>
     </div>
