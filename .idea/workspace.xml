@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added validation on unique info in edit and create">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/models/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
+    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added book model with valid, created @Get(/books) in BooksController, added page index.htm for /books">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/BookDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +219,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706893627801</updated>
       <workItem from="1706893628905" duration="9613000" />
-      <workItem from="1706954806801" duration="3057000" />
+      <workItem from="1706954806801" duration="4072000" />
     </task>
     <task id="LOCAL-00001" summary="start pattern">
       <option name="closed" value="true" />
@@ -278,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706956494606</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added book model with valid, created @Get(/books) in BooksController, added page index.htm for /books">
+      <option name="closed" value="true" />
+      <created>1706958281855</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706958281855</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +300,8 @@
     <MESSAGE value="added validation on age,info by pattern" />
     <MESSAGE value="added validation on birthday in edit" />
     <MESSAGE value="added validation on unique info in edit and create" />
-    <option name="LAST_COMMIT_MESSAGE" value="added validation on unique info in edit and create" />
+    <MESSAGE value="added book model with valid, created @Get(/books) in BooksController, added page index.htm for /books" />
+    <option name="LAST_COMMIT_MESSAGE" value="added book model with valid, created @Get(/books) in BooksController, added page index.htm for /books" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

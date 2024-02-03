@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о книгк</title>
+</head>
+<body>
+    <p>
+        <span th:text="${book.getName()}">VALUE</span>,
+        <span th:text="${book.getAuthor()}">VALUE</span>,
+        <span th:text="${book.getDate()}">VALUE</span>
+    </p>
+    <div>
+        <a th:href="@{/books/{id}/edit(id=${book.getId()})}">Редактировать</a>
+    </div>
+    <br>
+    <form th:method="DELETE" th:action="@{/books/{id}(id=${book.getId()})}">
+        <input type="submit" value="Удалить">
+    </form>
+</body>
+</html>

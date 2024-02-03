@@ -19,4 +19,10 @@ public class BookDao {
     public List<Book> index() {
         return jdbcTemplate.query("SELECT * FROM book",new BeanPropertyRowMapper<>(Book.class)).stream().toList();
     }
+
+    public Book getById(int id) {
+        return jdbcTemplate.query("SELECT * FROM book WHERE id=?",
+                new Object[]{id},new BeanPropertyRowMapper<>(Book.class))
+                .stream().findAny().orElse(null);
+    }
 }
