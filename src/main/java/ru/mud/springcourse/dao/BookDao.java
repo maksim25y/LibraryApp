@@ -25,4 +25,9 @@ public class BookDao {
                 new Object[]{id},new BeanPropertyRowMapper<>(Book.class))
                 .stream().findAny().orElse(null);
     }
+
+    public void updateBook(int id, Book book) {
+        jdbcTemplate.update("person SET name=?,author=?,date=? WHERE id=?",
+                book.getName(),book.getAuthor(),book.getDate());
+    }
 }
