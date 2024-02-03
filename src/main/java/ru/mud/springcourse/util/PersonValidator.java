@@ -24,10 +24,10 @@ public class PersonValidator implements Validator {
 
     @Override
     public void validate(Object o, Errors errors) {
-//        Person person = (Person) o;
-//        List<Person>list = personDao.getByName(((Person) o).getInfo());
-//        if((!list.isEmpty()&&list.getFirst().getId()==person.getId()&&person.getId()!=0)||(!list.isEmpty()&&person.getId()==0))
-//            errors.rejectValue("info","","Person with such a full name is ready to exist");
+        Person person = (Person) o;
+        if(person.getBirthday()>2024||person.getBirthday()<=1900){
+            errors.rejectValue("birthday","","Incorrect year of birthday");
+        }
     }
     private boolean checkCreate(List<Person>list,Person person){
         return list.isEmpty();
