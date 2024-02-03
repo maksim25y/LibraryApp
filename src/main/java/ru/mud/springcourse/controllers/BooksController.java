@@ -32,10 +32,10 @@ public class BooksController {
     public String getBook(@PathVariable("id")int id,Model model){
         Book book = bookDao.getById(id);
         model.addAttribute("book",book);
-        if(book.getUserId()==0)
+        if(book.getUserId().isEmpty())
             model.addAttribute("people",personDao.index());
         else
-            model.addAttribute("person",personDao.getById(book.getUserId()));
+            model.addAttribute("person",personDao.getById(book.getUserId().get()));
         return "books/show";
     }
 }

@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added page with info about book, added @Get(/{id}) in dao, added method checkById in BookDao">
+    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added description who have book now, but with validation of null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/models/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last.edited.regexp": "Иван Иванов Овывв вввв",
-    "last_opened_file_path": "D:/IdeaProjects/LibraryApp/src/main/webapp/WEB-INF/views/books",
+    "last_opened_file_path": "D:/IdeaProjects/LibraryApp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -218,7 +219,8 @@
       <option name="presentableId" value="Default" />
       <updated>1706893627801</updated>
       <workItem from="1706893628905" duration="9613000" />
-      <workItem from="1706954806801" duration="6853000" />
+      <workItem from="1706954806801" duration="7236000" />
+      <workItem from="1706968757731" duration="1664000" />
     </task>
     <task id="LOCAL-00001" summary="start pattern">
       <option name="closed" value="true" />
@@ -292,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706959206351</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added description who have book now, but with validation of null">
+      <option name="closed" value="true" />
+      <created>1706962211924</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706962211924</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +319,8 @@
     <MESSAGE value="added validation on unique info in edit and create" />
     <MESSAGE value="added book model with valid, created @Get(/books) in BooksController, added page index.htm for /books" />
     <MESSAGE value="added page with info about book, added @Get(/{id}) in dao, added method checkById in BookDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="added page with info about book, added @Get(/{id}) in dao, added method checkById in BookDao" />
+    <MESSAGE value="added description who have book now, but with validation of null" />
+    <option name="LAST_COMMIT_MESSAGE" value="added description who have book now, but with validation of null" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -386,21 +397,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
           <line>39</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/BookDao.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>

@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 public class Book {
     private int id;
@@ -15,12 +17,12 @@ public class Book {
     @Min(value = 0,message = "Year cannot be less than 0")
     @Max(value = 2024,message = "Your year of birthday cannot be more than 2024")
     private int date;
-    private int userId;
+    private Optional<Integer> userId;
     public Book(){
 
     }
 
-    public Book(int id, String name, String author, int date, int userId) {
+    public Book(int id, String name, String author, int date, Optional<Integer>userId) {
         this.id = id;
         this.name = name;
         this.author = author;
@@ -60,11 +62,11 @@ public class Book {
         this.date = date;
     }
 
-    public int getUserId() {
+    public Optional<Integer> getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Optional<Integer> userId) {
         this.userId = userId;
     }
 }
