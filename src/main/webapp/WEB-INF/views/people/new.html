@@ -11,7 +11,7 @@
     <div style="color: red" th:if="${#fields.hasErrors('info')}" th:errors="*{info}">Info error</div>
     <br>
     <label for="age">Введите год рождения: </label>
-    <input type="text" th:field="*{birthday}" id="age">
+    <input type="number" th:field="*{birthday}" id="age">
     <div style="color: red" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">Birthday error</div>
     <input type="submit" value="Добавить">
 </form>

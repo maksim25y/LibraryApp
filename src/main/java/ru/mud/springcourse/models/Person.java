@@ -12,12 +12,12 @@ import java.time.LocalDate;
 @Component
 public class Person {
     private int id;
-    @NotEmpty(message = "Your name cannot be empty")
+    @NotEmpty(message = "Поле не может быть пустым")
     @Pattern(regexp = "[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+",
-            message = "Your personal info should be in this format: Surname Name Patronymic")
+            message = "Инвормация о вас должна быть в следующем формате: Фамилия Имя Отчество")
     private String info;
-    @Min(value = 1901,message = "Your age cannot be more than 120 years old")
-    @Max(value = 2024,message = "Your year of birthday cannot be more than 2024")
+    @Min(value = 1901,message = "Ваш возраст не может быть больше 120 лет")
+    @Max(value = 2024,message = "Дата вашего рождения не может быть больше 2024")
     private int birthday;
 
     public int getId() {

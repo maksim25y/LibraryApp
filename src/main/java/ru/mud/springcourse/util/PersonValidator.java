@@ -27,7 +27,7 @@ public class PersonValidator implements Validator {
         Person person = (Person) o;
         if (!personDao.getByName(person.getInfo()).isEmpty()) {
             if (personDao.getByName(person.getInfo()).get().getId() != person.getId()) {
-                errors.rejectValue("info", "", "Person with this personal info already exist");
+                errors.rejectValue("info", "", "Пользователь с такими данными уже существует");
             }
         }
     }

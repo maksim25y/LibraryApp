@@ -15,7 +15,7 @@
     <div style="color: red" th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Author error</div>
     <br>
     <label for="date">Введите дату: </label>
-    <input type="text" th:field="*{date}" id="date">
+    <input type="number" th:field="*{date}" id="date">
     <div style="color: red" th:if="${#fields.hasErrors('date')}" th:errors="*{date}">Date error</div>
     <br>
     <input type="submit" value="Добавить">

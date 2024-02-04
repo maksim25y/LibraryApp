@@ -11,11 +11,11 @@ import java.util.Optional;
 @Component
 public class Book {
     private int id;
-    @NotEmpty
-    @Pattern(regexp = "[а-яА-Я]+",message = "Only russian")
+    @NotEmpty(message = "Поле не может быть пустым")
+    @Pattern(regexp = "[а-яА-Я]+",message = "Название должно быть на русском языке")
     private String name;
-    @NotEmpty
-    @Pattern(regexp = "([а-яёА-ЯЁ]|\\s)+",message = "Only russian")
+    @NotEmpty(message = "Поле не может быть пустым")
+    @Pattern(regexp = "([а-яёА-ЯЁ]|\\s)+",message = "Название должно быть на русском языке")
     private String author;
     @Min(value = 0,message = "Year cannot be less than 0")
     @Max(value = 2024,message = "Year cannot be more than 2024")
