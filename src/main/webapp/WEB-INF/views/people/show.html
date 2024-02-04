@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Информация о пользователе</title>
+    <title>Информация о человеке</title>
 </head>
 <body>
     <p th:text="${person.getInfo()}">VALUE</p>
     <p th:text="${person.getBirthday()}">VALUE</p>
+    <div th:if="${books}">
+        <p>Книги у человека: </p>
+        <div th:each="book: ${books}">
+            <p th:text="${book.getName() + ', '+book.getAuthor()+ ', '+book.getDate()}"></p>
+        </div>
+    </div>
+    <p th:if="${books==null}">У человека нет книг</p>
     <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Редактировать</a>
     <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
         <input type="submit" value="Удалить">

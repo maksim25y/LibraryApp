@@ -6,18 +6,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import ru.mud.springcourse.dao.BookDao;
 import ru.mud.springcourse.dao.PersonDao;
+import ru.mud.springcourse.models.Book;
 import ru.mud.springcourse.models.Person;
 import ru.mud.springcourse.util.PersonValidator;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/people")
 public class PeopleController {
     private final PersonDao personDao;
+    private final BookDao bookDao;
     private final PersonValidator personValidator;
     @Autowired
-    public PeopleController(PersonDao personDao, PersonValidator personValidator) {
+    public PeopleController(PersonDao personDao, BookDao bookDao, PersonValidator personValidator) {
         this.personDao = personDao;
+        this.bookDao = bookDao;
         this.personValidator = personValidator;
     }
 
@@ -41,6 +47,9 @@ public class PeopleController {
     @GetMapping("/{id}")
     public String show(@PathVariable("id")int id, Model model){
         model.addAttribute("person",personDao.getById(id));
+        List<Book>books = bookDao.getBooksByUserId(id);
+        if(!books.isEmpty())
+            model.addAttribute("books",books);
         return "people/show";
     }
     @GetMapping("/{id}/edit")
