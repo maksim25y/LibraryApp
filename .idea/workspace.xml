@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added validation of edit book and fix bag with update book in dao">
+    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added choosing of owner book if book has not owner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/PersonDao.java" afterDir="false" />
@@ -104,7 +104,7 @@
       <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 10.1.17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.17" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" activateToolWindowBeforeRun="false" APPLICATION_SERVER_NAME="Tomcat 10.1.17" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="LibraryApp:war exploded">
@@ -221,7 +221,7 @@
       <workItem from="1706893628905" duration="9613000" />
       <workItem from="1706954806801" duration="7236000" />
       <workItem from="1706968757731" duration="5698000" />
-      <workItem from="1707039291625" duration="3847000" />
+      <workItem from="1707039291625" duration="10072000" />
     </task>
     <task id="LOCAL-00001" summary="start pattern">
       <option name="closed" value="true" />
@@ -327,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707039702403</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added choosing of owner book if book has not owner">
+      <option name="closed" value="true" />
+      <created>1707043285698</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707043285698</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +356,8 @@
     <MESSAGE value="added select of people if book has not owner and description about owner if else" />
     <MESSAGE value="added page of editing book" />
     <MESSAGE value="added validation of edit book and fix bag with update book in dao" />
-    <option name="LAST_COMMIT_MESSAGE" value="added validation of edit book and fix bag with update book in dao" />
+    <MESSAGE value="added choosing of owner book if book has not owner" />
+    <option name="LAST_COMMIT_MESSAGE" value="added choosing of owner book if book has not owner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -385,6 +394,51 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>

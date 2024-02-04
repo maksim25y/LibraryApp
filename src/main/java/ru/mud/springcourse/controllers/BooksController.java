@@ -12,6 +12,8 @@ import ru.mud.springcourse.dao.PersonDao;
 import ru.mud.springcourse.models.Book;
 import ru.mud.springcourse.models.Person;
 
+import java.util.Optional;
+
 @Controller
 @Component
 @RequestMapping("/books")
@@ -33,11 +35,12 @@ public class BooksController {
     public String getBook(@PathVariable("id")int id,Model model){
         Book book = bookDao.getById(id);
         model.addAttribute("book",book);
-        model.addAttribute("give", new Person());
         if(book.getUserId().isEmpty()) {
             model.addAttribute("people", personDao.index());
-        }else
-            model.addAttribute("person",personDao.getById(book.getUserId().get()));
+            model.addAttribute("give", new Person());
+        }else {
+            model.addAttribute("person", personDao.getById(book.getUserId().get()));
+        }
         return "books/show";
     }
     @GetMapping("/{id}/edit")
@@ -53,9 +56,20 @@ public class BooksController {
         bookDao.updateBook(id,book);
         return "redirect:/books";
     }
+//    @PostMapping("/{id}")
+//    public String changeBook(@ModelAttribute("userId")int userId,@PathVariable("id")int id,Model model){
+////        personDao.changeUserId(id,person.getId());
+//        System.out.println("BookId = "+id);
+//        System.out.println("UserId = "+userId);
+//        return "redirect:/books";
+//    }
     @PostMapping("/{id}")
-    public String changeBook(@ModelAttribute("give")Person person, @PathVariable("id")int id){
-        personDao.changeUserId(id,person.getId());
+    public String changeBook(@RequestParam(value = "userId",required = false) Integer userId, @PathVariable("id")int id,
+                             @ModelAttribute("person") Person person){
+        if(userId==null)
+            personDao.changeUserId(id,person.getId());
+        else
+            personDao.clearBook(id);
         return "redirect:/books";
     }
 }

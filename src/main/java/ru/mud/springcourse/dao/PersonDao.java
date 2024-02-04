@@ -50,4 +50,8 @@ public class PersonDao {
     public void changeUserId(int id, int userId) {
         jdbcTemplate.update("UPDATE book SET user_id=? WHERE id=?",userId,id);
     }
+
+    public void clearBook(int id) {
+        jdbcTemplate.update("UPDATE book SET user_id=null WHERE id=?",id);
+    }
 }
