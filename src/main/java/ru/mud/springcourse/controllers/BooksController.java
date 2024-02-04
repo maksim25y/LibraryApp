@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.mud.springcourse.dao.BookDao;
 import ru.mud.springcourse.dao.PersonDao;
 import ru.mud.springcourse.models.Book;
+import ru.mud.springcourse.models.Person;
 
 @Controller
 @Component
@@ -32,9 +33,10 @@ public class BooksController {
     public String getBook(@PathVariable("id")int id,Model model){
         Book book = bookDao.getById(id);
         model.addAttribute("book",book);
-        if(book.getUserId().isEmpty())
-            model.addAttribute("people",personDao.index());
-        else
+        model.addAttribute("give", new Person());
+        if(book.getUserId().isEmpty()) {
+            model.addAttribute("people", personDao.index());
+        }else
             model.addAttribute("person",personDao.getById(book.getUserId().get()));
         return "books/show";
     }
@@ -49,6 +51,11 @@ public class BooksController {
                              BindingResult bindingResult){
         if(bindingResult.hasErrors())return "books/edit";
         bookDao.updateBook(id,book);
+        return "redirect:/books";
+    }
+    @PostMapping("/{id}")
+    public String changeBook(@ModelAttribute("give")Person person, @PathVariable("id")int id){
+        personDao.changeUserId(id,person.getId());
         return "redirect:/books";
     }
 }

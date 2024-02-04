@@ -46,4 +46,8 @@ public class PersonDao {
                 new Object[]{info},
                 new BeanPropertyRowMapper<>(Person.class)).stream().findAny();
     }
+
+    public void changeUserId(int id, int userId) {
+        jdbcTemplate.update("UPDATE book SET user_id=? WHERE id=?",userId,id);
+    }
 }
