@@ -10,12 +10,12 @@ import java.util.Optional;
 @Component
 public class Book {
     private int id;
-    @Pattern(regexp = "[а-яёА-ЯЁ]+")
+    @Pattern(regexp = "([а-яёА-ЯЁ]|\\s)+",message = "Only russian")
     private String name;
-    @Pattern(regexp = "[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ ")
+    @Pattern(regexp = "([а-яёА-ЯЁ]|\\s)+",message = "Only russian")
     private String author;
     @Min(value = 0,message = "Year cannot be less than 0")
-    @Max(value = 2024,message = "Your year of birthday cannot be more than 2024")
+    @Max(value = 2024,message = "Year cannot be more than 2024")
     private int date;
     private Optional<Integer> userId;
     public Book(){

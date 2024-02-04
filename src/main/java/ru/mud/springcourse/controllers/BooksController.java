@@ -6,10 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import ru.mud.springcourse.dao.BookDao;
 import ru.mud.springcourse.dao.PersonDao;
 import ru.mud.springcourse.models.Book;
@@ -45,5 +42,13 @@ public class BooksController {
     public String getEdit(@PathVariable("id")int id,Model model){
         model.addAttribute("book",bookDao.getById(id));
         return "books/edit";
+    }
+    @PatchMapping("/{id}")
+    public String updateBook(@PathVariable("id")int id,
+                             @ModelAttribute("book")@Valid Book book,
+                             BindingResult bindingResult){
+        if(bindingResult.hasErrors())return "books/edit";
+        bookDao.updateBook(id,book);
+        return "redirect:/books";
     }
 }
