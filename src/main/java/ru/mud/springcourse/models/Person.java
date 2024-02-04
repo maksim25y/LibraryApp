@@ -16,8 +16,8 @@ public class Person {
     @Pattern(regexp = "[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+",
             message = "Информация о вас должна быть в следующем формате: Фамилия Имя Отчество")
     private String info;
-    @Min(value = 1901,message = "Дата рождения не может быть меньше 1900")
-    @Max(value = 2024,message = "Дата вашего рождения не может быть больше 2024")
+    @Min(value = 1901,message = "Год вашего рождения не может быть меньше 1900")
+    @Max(value = 2024,message = "Год вашего рождения не может быть больше 2024")
     private int birthday;
 
     public int getId() {
