@@ -25,12 +25,10 @@ public class PersonValidator implements Validator {
     @Override
     public void validate(Object o, Errors errors) {
         Person person = (Person) o;
-        if(personDao.getByName(person.getInfo()).get().getId()!=person.getId())
-            errors.rejectValue("info","","Person with this personal info already exist");
-
-
-    }
-    private boolean checkCreate(List<Person>list,Person person){
-        return list.isEmpty();
+        if (!personDao.getByName(person.getInfo()).isEmpty()) {
+            if (personDao.getByName(person.getInfo()).get().getId() != person.getId()) {
+                errors.rejectValue("info", "", "Person with this personal info already exist");
+            }
+        }
     }
 }

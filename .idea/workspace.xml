@@ -9,11 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added choosing of owner book if book has not owner">
+    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added clearing book">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/PersonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/util/PersonValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -95,6 +98,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\LibraryApp\src\main\webapp\WEB-INF\views\books" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\LibraryApp\src\main\webapp\WEB-INF\views\books" />
     </key>
   </component>
@@ -221,7 +227,7 @@
       <workItem from="1706893628905" duration="9613000" />
       <workItem from="1706954806801" duration="7236000" />
       <workItem from="1706968757731" duration="5698000" />
-      <workItem from="1707039291625" duration="10072000" />
+      <workItem from="1707039291625" duration="13213000" />
     </task>
     <task id="LOCAL-00001" summary="start pattern">
       <option name="closed" value="true" />
@@ -335,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707043285698</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added clearing book">
+      <option name="closed" value="true" />
+      <created>1707054530877</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707054530877</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,103 +371,36 @@
     <MESSAGE value="added page of editing book" />
     <MESSAGE value="added validation of edit book and fix bag with update book in dao" />
     <MESSAGE value="added choosing of owner book if book has not owner" />
-    <option name="LAST_COMMIT_MESSAGE" value="added choosing of owner book if book has not owner" />
+    <MESSAGE value="added clearing book" />
+    <option name="LAST_COMMIT_MESSAGE" value="added clearing book" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="1" />
+          <line>37</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>
-          <line>54</line>
+          <line>36</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java</url>
-          <line>51</line>
-          <properties class="ru.mud.springcourse.controllers.PeopleController" method="updatePerson">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
+          <line>35</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="((org.springframework.validation.support.BindingAwareModelMap)model).entrySet().toArray()[0]" custom="org.springframework.validation.support.BindingAwareModelMap" />
+        <watch expression="personValidator" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

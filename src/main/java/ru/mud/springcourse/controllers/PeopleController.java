@@ -32,7 +32,7 @@ public class PeopleController {
         return "people/new";
     }
     @PostMapping
-    public String addNew(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult){
+    public String addNew(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult,Model model){
         personValidator.validate(person,bindingResult);
         if(bindingResult.hasErrors())return "people/new";
         personDao.save(person);
