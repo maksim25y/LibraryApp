@@ -38,6 +38,7 @@ public class BooksController {
     }
     @PostMapping
     public String createBook(@ModelAttribute("book")@Valid Book book,BindingResult bindingResult){
+        if(bindingResult.hasErrors())return "books/new";
         bookDao.save(book);
         return "redirect:/books";
     }

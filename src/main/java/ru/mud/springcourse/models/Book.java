@@ -2,6 +2,7 @@ package ru.mud.springcourse.models;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.stereotype.Component;
 
@@ -10,8 +11,10 @@ import java.util.Optional;
 @Component
 public class Book {
     private int id;
-    @Pattern(regexp = "([а-яёА-ЯЁ]|\\s)+",message = "Only russian")
+    @NotEmpty
+    @Pattern(regexp = "[а-яА-Я]+",message = "Only russian")
     private String name;
+    @NotEmpty
     @Pattern(regexp = "([а-яёА-ЯЁ]|\\s)+",message = "Only russian")
     private String author;
     @Min(value = 0,message = "Year cannot be less than 0")
