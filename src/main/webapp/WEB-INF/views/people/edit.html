@@ -20,7 +20,7 @@
         </header>
 
         <form th:method="PATCH" th:action="@{/people/{id}(id=${person.getId()})}" th:object="${person}">
-            <div class="form-group">
+            <div class="form-group mb-2">
                 <label for="info">Введите свое ФИО: </label>
                 <input class="form-control" type="text" th:field="*{info}" id="info" placeholder="Введите новое ФИО" required>
                 <div class="alert alert-danger mt-2" role="alert" th:if="${#fields.hasErrors('info')}" th:errors="*{info}">Info error</div>
@@ -33,9 +33,6 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Редактировать</button>
-            <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
-                <button type="submit" class="btn btn-danger">Удалить</button>
-            </form>
         </form>
 
 

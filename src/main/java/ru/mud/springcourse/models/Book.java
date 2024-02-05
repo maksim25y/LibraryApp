@@ -12,13 +12,14 @@ import java.util.Optional;
 public class Book {
     private int id;
     @NotEmpty(message = "Поле не может быть пустым")
-    @Pattern(regexp = "[а-яА-Я]+",message = "Название должно быть на русском языке")
+    @Pattern(regexp = "[а-яА-Я\\s]+",message = "Название книги должно быть на русском языке")
     private String name;
     @NotEmpty(message = "Поле не может быть пустым")
-    @Pattern(regexp = "([а-яёА-ЯЁ]|\\s)+",message = "Название должно быть на русском языке")
+    @Pattern(regexp = "[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+",
+            message = "Информация об авторе должна быть в следующем формате: Фамилия Имя Отчество")
     private String author;
-    @Min(value = 0,message = "Year cannot be less than 0")
-    @Max(value = 2024,message = "Year cannot be more than 2024")
+    @Min(value = 0,message = "Год выпуска не может быть меньше 0")
+    @Max(value = 2024,message = "Год выпуска не может быть больше 2024")
     private int date;
     private Optional<Integer> userId;
     public Book(){
