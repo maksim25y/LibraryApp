@@ -19,7 +19,7 @@
             </ul>
         </header>
         <form th:method="POST" th:action="@{/people}" th:object="${person}">
-            <div class="form-group">
+            <div class="form-group mb-2">
                 <label for="info">Введите свое ФИО: </label>
                 <input class="form-control" type="text" th:field="*{info}" id="info" placeholder="Введите ФИО" required>
                 <div class="alert alert-danger mt-2" role="alert" th:if="${#fields.hasErrors('info')}" th:errors="*{info}">Info error</div>
