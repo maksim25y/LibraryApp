@@ -31,7 +31,6 @@
             <p>Книги у человека: </p>
             <ul class="list-group mb-2" th:each="book: ${books}">
                 <li class="list-group-item list-group-item-info" th:text="${book.getName() + ', '+book.getAuthor()+ ', '+book.getDate()}">
-<!--                    <p th:text="${book.getName() + ', '+book.getAuthor()+ ', '+book.getDate()}"></p>-->
                 </li>
             </ul>
         </div>
