@@ -1,16 +1,20 @@
 package ru.mud.springcourse.models;
 
-import jakarta.validation.Valid;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
+@Entity
 public class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NotEmpty(message = "Поле не может быть пустым")
     @Pattern(regexp = "[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+",
@@ -19,6 +23,8 @@ public class Person {
     @Min(value = 1901,message = "Год вашего рождения не может быть меньше 1900")
     @Max(value = 2024,message = "Год вашего рождения не может быть больше 2024")
     private int birthday;
+    @OneToMany(mappedBy = "person",fetch = FetchType.EAGER)
+    private final List<Book>bookList = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -51,5 +57,18 @@ public class Person {
         this.id = id;
         this.info = info;
         this.birthday = birthday;
+    }
+
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", info='" + info + '\'' +
+                ", birthday=" + birthday +
+                '}';
     }
 }

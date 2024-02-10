@@ -1,15 +1,17 @@
 package ru.mud.springcourse.models;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
-
 @Component
+@Entity
 public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NotEmpty(message = "Поле не может быть пустым")
     @Pattern(regexp = "[а-яА-Я\\s]+",message = "Название книги должно быть на русском языке")
@@ -21,17 +23,18 @@ public class Book {
     @Min(value = 0,message = "Год выпуска не может быть меньше 0")
     @Max(value = 2024,message = "Год выпуска не может быть больше 2024")
     private int date;
-    private Optional<Integer> userId;
+    @ManyToOne
+    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    private Person person;
     public Book(){
 
     }
 
-    public Book(int id, String name, String author, int date, Optional<Integer>userId) {
+    public Book(int id, String name, String author, int date) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.date = date;
-        this.userId = userId;
     }
 
     public int getId() {
@@ -66,11 +69,21 @@ public class Book {
         this.date = date;
     }
 
-    public Optional<Integer> getUserId() {
-        return userId;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setUserId(Optional<Integer> userId) {
-        this.userId = userId;
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", date=" + date +
+                '}';
     }
 }
