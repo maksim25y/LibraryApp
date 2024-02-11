@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added pagination by pages">
+    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added sorting books by year">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/repositories/BooksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/repositories/BooksRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/services/BooksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/services/BooksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/500.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/400.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -236,7 +235,7 @@
       <workItem from="1707556863261" duration="4000" />
       <workItem from="1707575141994" duration="8867000" />
       <workItem from="1707654363788" duration="8909000" />
-      <workItem from="1707667341751" duration="2496000" />
+      <workItem from="1707667341751" duration="3158000" />
     </task>
     <task id="LOCAL-00001" summary="start pattern">
       <option name="closed" value="true" />
@@ -486,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707669202701</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added sorting books by year">
+      <option name="closed" value="true" />
+      <created>1707670119074</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1707670119074</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +501,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added validation on birthday in edit" />
     <MESSAGE value="added validation on unique info in edit and create" />
     <MESSAGE value="added book model with valid, created @Get(/books) in BooksController, added page index.htm for /books" />
     <MESSAGE value="added page with info about book, added @Get(/{id}) in dao, added method checkById in BookDao" />
@@ -519,7 +525,8 @@
     <MESSAGE value="added overdue books" />
     <MESSAGE value="added search book" />
     <MESSAGE value="added pagination by pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pagination by pages" />
+    <MESSAGE value="added sorting books by year" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sorting books by year" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

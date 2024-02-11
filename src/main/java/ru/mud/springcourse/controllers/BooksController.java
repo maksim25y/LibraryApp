@@ -35,7 +35,7 @@ public class BooksController {
                          @RequestParam(name="page_per_page",required = false)Integer pagePerPage,
                          @RequestParam(name="sort_by_year",required = false)Boolean sortByYear){
         if(sortByYear==null)sortByYear = false;
-        if(page!=null||pagePerPage!=null){
+        if(page!=null&&pagePerPage!=null){
             model.addAttribute("books",booksService.findWithPagination(page,pagePerPage,sortByYear));
         }else {
             model.addAttribute("books",booksService.findAll(sortByYear));
