@@ -24,9 +24,15 @@
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/080c09d8-d87c-48a9-a1a2-a07d9c897403)
 
+При нажатии на пользователя происходит переход на страницу(/people/{id}) с информацией о пользователе (также и список его книг). Если книга была взята более 10 дней назад, то она считается просроченой и подсвечивается красным цветом.
 
-  
-![image](https://github.com/maksim25y/LibraryApp/assets/131711956/10e54254-b1b5-4301-8eb1-b0579f915f44)
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/fe8e1073-de7c-4b34-a104-402991b2ab84)
+
+Если пользователь брал книги, то все они будут выведены, в противном случае будет надпись "У человека нет книг"
+
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/9a9d0e2c-261b-4d22-9585-73c8d640f905)
+
+
 
 <details><summary>Реализация</summary>  
   
