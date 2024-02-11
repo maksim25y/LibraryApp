@@ -12,10 +12,12 @@
 1) Возраст должен быть в следующем диапазоне (1900-2024]
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/5db855fa-c952-46a4-8830-a0d983229f9b)
+
 2) ФИО должно быть по следующему шаблону [Фамилия Имя Отчество], причем на русском языке
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/42998745-7f27-4bc6-9646-85f67ae6363f)
 3) Поля не должны быть пустыми
+
 4) ФИО должно быть уникальным
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/f6bd633b-d37c-4da5-82ac-11b052afd177)
