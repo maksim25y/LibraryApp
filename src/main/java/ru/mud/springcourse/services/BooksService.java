@@ -20,7 +20,8 @@ public class BooksService {
     public BooksService(BooksRepository booksRepository) {
         this.booksRepository = booksRepository;
     }
-    public List<Book> findAll(){
+    public List<Book> findAll(boolean sortByDate){
+        if(sortByDate)return booksRepository.findByOrderByDate();
         return booksRepository.findAll();
     }
     public Optional<Book> findById(int id){
@@ -52,8 +53,8 @@ public class BooksService {
         return book.getPerson();
     }
 
-    public List<Book> findWithPagination(Integer page, Integer pagePerPage) {
-        List<Book>books = findAll();
+    public List<Book> findWithPagination(Integer page, Integer pagePerPage,boolean sortByDate) {
+        List<Book>books = findAll(sortByDate);
         List<Book>result = new ArrayList<>();
         int pos=page*pagePerPage-1;
         while (pos<books.size()&&pagePerPage!=0){
