@@ -30,8 +30,14 @@ public class BooksController {
     }
 
     @GetMapping
-    public String getAll(Model model){
-        model.addAttribute("books",booksService.findAll());
+    public String getAll(Model model,
+                         @RequestParam(name="page",required = false)Integer page,
+                         @RequestParam(name="page_per_page",required = false)Integer pagePerPage){
+        if(page!=null||pagePerPage!=null){
+            model.addAttribute("books",booksService.findWithPagination(page,pagePerPage));
+        }else {
+            model.addAttribute("books",booksService.findAll());
+        }
         return "books/index";
     }
     @GetMapping("/new")

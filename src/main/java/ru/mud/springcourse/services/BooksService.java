@@ -51,4 +51,16 @@ public class BooksService {
     public Person getPersonByBook(Book book) {
         return book.getPerson();
     }
+
+    public List<Book> findWithPagination(Integer page, Integer pagePerPage) {
+        List<Book>books = findAll();
+        List<Book>result = new ArrayList<>();
+        int pos=page*pagePerPage-1;
+        while (pos<books.size()&&pagePerPage!=0){
+            result.add(books.get(pos));
+            pos++;
+            pagePerPage--;
+        }
+        return result;
+    }
 }

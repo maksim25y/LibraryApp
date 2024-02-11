@@ -64,7 +64,6 @@ public class PeopleService {
         Person person = peopleRepository.findById(id).get();
         person.getBookList().add(book);
         book.setTaken(new Date());
-        //book.setTaken(now());
         book.setPerson(person);
     }
     @Transactional
