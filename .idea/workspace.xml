@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added sorting books by year">
+    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="edit params in sorting and pagination (book)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/500.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/400.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +233,7 @@
       <workItem from="1707556863261" duration="4000" />
       <workItem from="1707575141994" duration="8867000" />
       <workItem from="1707654363788" duration="8909000" />
-      <workItem from="1707667341751" duration="3158000" />
+      <workItem from="1707667341751" duration="4026000" />
     </task>
     <task id="LOCAL-00001" summary="start pattern">
       <option name="closed" value="true" />
@@ -493,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707670119074</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="edit params in sorting and pagination (book)">
+      <option name="closed" value="true" />
+      <created>1707670683324</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1707670683324</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +507,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added validation on unique info in edit and create" />
     <MESSAGE value="added book model with valid, created @Get(/books) in BooksController, added page index.htm for /books" />
     <MESSAGE value="added page with info about book, added @Get(/{id}) in dao, added method checkById in BookDao" />
     <MESSAGE value="added description who have book now, but with validation of null" />
@@ -526,7 +531,8 @@
     <MESSAGE value="added search book" />
     <MESSAGE value="added pagination by pages" />
     <MESSAGE value="added sorting books by year" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sorting books by year" />
+    <MESSAGE value="edit params in sorting and pagination (book)" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit params in sorting and pagination (book)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
