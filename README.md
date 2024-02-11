@@ -61,7 +61,7 @@
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/4bdffc3a-1621-4821-880e-8bd1e8f3d86a)
 
 
-При добавлении параметров запроса ?page=n&page_per_page=m книги будет получена n-ая страница, на котороы будут расположены m книг. Пример работы со набором параметров page=1&page_per_page=2:
+При добавлении параметров запроса ?page=n&page_per_page=m книги будет получена n-ая страница, на которой будут расположены m книг. Пример работы с набором параметров page=1&page_per_page=2:
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/022f61b2-fbf4-416f-8f3e-f0ecc2dad465)
 
@@ -76,6 +76,25 @@
 При нажатии на кнопку редактирования будет переход на страницу с редактированием информации о книге, все поля имеют валидацию.
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/f8671d07-04ba-4b6a-bbc5-5cc23588ee8a)
+
+При нажатии на кнопку "Удалить" книга будет удалена из базы данных.
+
+При переходе по адресу /books/search будет получена страница с ппоиском книг. При вводе названия книги (частичное название тоже подойдет) будет получена книга (вместе с текущим владельцем книги, если он есть), наиболее подходящая под запрос:
+
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/fc06b827-f27b-40ee-ac94-069850ddf433)
+
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/be282c88-9f64-49b2-bf47-062148fb6e08)
+
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/0bf5b813-7404-4cb8-a0aa-36928139368b)
+
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/316024a6-13f0-47b2-913e-fcf8a82d0256)
+
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/c71df1de-8f92-4dfe-aeaf-353b26c362cc)
+
+
+
+
+
 
 
 
