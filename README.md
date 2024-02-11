@@ -22,7 +22,7 @@
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/f6bd633b-d37c-4da5-82ac-11b052afd177)
 
-![image](https://github.com/maksim25y/LibraryApp/assets/131711956/a499732b-51bf-4543-9e48-d4ecd792c1a1)
+![image](https://github.com/maksim25y/LibraryApp/assets/131711956/080c09d8-d87c-48a9-a1a2-a07d9c897403)
 
 
   
