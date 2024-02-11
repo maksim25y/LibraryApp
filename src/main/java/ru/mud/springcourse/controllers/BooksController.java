@@ -13,6 +13,8 @@ import ru.mud.springcourse.models.Person;
 import ru.mud.springcourse.services.BooksService;
 import ru.mud.springcourse.services.PeopleService;
 
+import java.util.List;
+
 
 @Controller
 @Component
@@ -85,5 +87,22 @@ public class BooksController {
     public String deleteBook(@PathVariable("id") int id){
         booksService.delete(id);
         return "redirect:/books";
+    }
+    @GetMapping("/search")
+    public String searchBooks(){
+        return "books/search";
+    }
+    @PostMapping("/search")
+    public String getBooksByName(@RequestParam("search")String search,Model model){
+        System.out.println(search);
+        Book book = booksService.getBooksByPrefix(search);
+        System.out.println(book);
+        if(book!=null){
+            model.addAttribute("book",book);
+            Person person = booksService.getPersonByBook(book);
+            if(person!=null)model.addAttribute("person",person);
+        }
+        else model.addAttribute("notBook",true);
+        return "books/search";
     }
 }

@@ -1,5 +1,6 @@
 package ru.mud.springcourse.services;
 
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -7,6 +8,7 @@ import ru.mud.springcourse.models.Book;
 import ru.mud.springcourse.models.Person;
 import ru.mud.springcourse.repositories.BooksRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,5 +42,13 @@ public class BooksService {
     @Transactional
     public Person getBookPerson(int id) {
         return booksRepository.findById(id).get().getPerson();
+    }
+    @Transactional
+    public Book getBooksByPrefix(String search) {
+        return booksRepository.findByNameStartingWith(search);
+    }
+
+    public Person getPersonByBook(Book book) {
+        return book.getPerson();
     }
 }
