@@ -87,11 +87,12 @@
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/316024a6-13f0-47b2-913e-fcf8a82d0256)
 
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/c71df1de-8f92-4dfe-aeaf-353b26c362cc)
-
-<details><summary>Реализация</summary>  
+</details>
+<details><summary>Реализация</summary>
 Во время выполнения проекта я использовал следующий набор технологий: PostgreSQL, ApacheTomcat, Maven, Spring MVC, Spring Data JPA, ORM Hibernate, Bootstrap, Thymeleaf.
-База данных:
   
+База данных:
+
 ![image](https://github.com/maksim25y/LibraryApp/assets/131711956/26ca6a28-b8d3-4a2a-bd34-75e05d0b440c)
 
 </details>
