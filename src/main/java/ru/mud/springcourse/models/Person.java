@@ -23,7 +23,8 @@ public class Person {
     @Min(value = 1901,message = "Год вашего рождения не может быть меньше 1900")
     @Max(value = 2024,message = "Год вашего рождения не может быть больше 2024")
     private int birthday;
-    @OneToMany(mappedBy = "person",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "person",fetch = FetchType.LAZY)
+    @OrderBy(value = "taken DESC")
     private final List<Book>bookList = new ArrayList<>();
 
     public int getId() {

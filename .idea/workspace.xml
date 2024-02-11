@@ -9,23 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added boostrap on page (/books/new)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/repositories/BooksRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/repositories/PeopleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/services/BooksService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/services/PeopleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+    <list default="true" id="2336262b-2b17-4b93-bad3-393c56933cc7" name="Changes" comment="added spring data jpa and hibernate instead jdbc template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/config/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/controllers/PeopleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/BookDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/dao/PersonDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/models/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/util/PersonValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/services/PeopleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mud/springcourse/services/PeopleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +83,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last.edited.regexp": "Александр Сергеевич Пушкин",
-    "last_opened_file_path": "D:/IdeaProjects/JpaMaven",
+    "last_opened_file_path": "D:/IdeaProjects/LibraryApp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -246,7 +236,8 @@
       <workItem from="1707502354325" duration="3851000" />
       <workItem from="1707508274414" duration="1982000" />
       <workItem from="1707556863261" duration="4000" />
-      <workItem from="1707575141994" duration="8175000" />
+      <workItem from="1707575141994" duration="8867000" />
+      <workItem from="1707654363788" duration="4924000" />
     </task>
     <task id="LOCAL-00001" summary="start pattern">
       <option name="closed" value="true" />
@@ -464,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707138784221</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added spring data jpa and hibernate instead jdbc template">
+      <option name="closed" value="true" />
+      <created>1707595942087</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1707595942087</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added page index, added database, added controller PeopleController and PersonDao, method get for address /people" />
     <MESSAGE value="added page og adding new person: method Post(/people) and method Get (/new)" />
     <MESSAGE value="added page of edit person: added @Get(/{id}, add @Patch(/{id}/edit)" />
     <MESSAGE value="added validation on age,info by pattern" />
@@ -497,7 +495,8 @@
     <MESSAGE value="added boostrap on page (/books)" />
     <MESSAGE value="added boostrap on page (/books/id/edit)" />
     <MESSAGE value="added boostrap on page (/books/new)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added boostrap on page (/books/new)" />
+    <MESSAGE value="added spring data jpa and hibernate instead jdbc template" />
+    <option name="LAST_COMMIT_MESSAGE" value="added spring data jpa and hibernate instead jdbc template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

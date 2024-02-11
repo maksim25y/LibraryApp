@@ -7,6 +7,9 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Component
 @Entity
 public class Book {
@@ -26,15 +29,46 @@ public class Book {
     @ManyToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
     private Person person;
+    @Column(name = "taken")
+    @Temporal(value = TemporalType.TIMESTAMP)
+    private Date taken;
+    @Transient
+    private boolean bad;
+
+    public boolean isBad() {
+        return bad;
+    }
+
+    public void setBad(boolean bad) {
+        this.bad = bad;
+    }
+
     public Book(){
 
     }
 
-    public Book(int id, String name, String author, int date) {
+    public Date getTaken() {
+        return taken;
+    }
+
+    public void setTaken(Date taken) {
+        this.taken = taken;
+    }
+    //    public LocalDate getTaken() {
+//        return taken;
+//    }
+//
+//    public void setTaken(LocalDate taken) {
+//        this.taken = taken;
+//    }
+
+
+    public Book(int id, String name, String author, int date, Date taken) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.date = date;
+        this.taken = taken;
     }
 
     public int getId() {

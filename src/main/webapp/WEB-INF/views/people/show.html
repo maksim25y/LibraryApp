@@ -30,7 +30,7 @@
         <div th:if="${books}">
             <p>Книги у человека: </p>
             <ul class="list-group mb-2" th:each="book: ${books}">
-                <li class="list-group-item list-group-item-info" th:text="${book.getName() + ', '+book.getAuthor()+ ', '+book.getDate()}">
+                <li  th:style="${book.isBad()}? 'color: red;'" style="color: red" class="list-group-item list-group-item-info" th:text="${book.getName() + ', '+book.getAuthor()+ ', '+book.getDate()}">
                 </li>
             </ul>
         </div>
